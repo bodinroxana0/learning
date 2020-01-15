@@ -1,0 +1,9 @@
+<data>
+	<items>
+		<item name="item">item2abc</item>
+		<item name="item">item2abc</item>
+	</items>
+	<node>
+		<item callout="x">item_callout</item>
+	</node>
+</data>
