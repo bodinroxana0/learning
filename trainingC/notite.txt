@@ -1,0 +1,62 @@
+Tipuri de date:
+-int -> probleme de portabilitate intre microcontrolere
+-const sau #define 
+-const-> nu mai poate fi modificata(pentru embedded , plaseaza var in mem flash), poate fi fol si ca paramet5ru in fct
+-volatile->pt def registrilor de periferice,fara el, se optimizeaza accesul
+-modulo->doar pentru int
+
+Bitwise op:
+-& utilizat pentru masti
+-sau , folosit pentru a seta val
+-xor, pentru toggle
+-shiftarea la stanga, e fara pastrearea semnului
+-shiftarea la dreapta, tine cont de semn
+
+
+-daca avem o variablia globala si una locala intr-o functie, si au acelasi nume, cea care va fi folosita va fi cea locala
+
+Functii:
+-cand dam parametru , se paseaza o copie
+-extern int var-> daca vrem sa folosim variabile din exteriorul fct
+
+Pointeri:
+-un tip de variabila care poate stoca adrese
+-au o dimensiune fixa,indiferent de tipul pointat
+- * operator de indirectare -> pt declarare
+- &var -> pt a accesa adresa
+
+-------------------------------------
+int x=1;
+int *ip;
+ip=&x;//ip pointeaza spre x
+*ip=0;//si x=0
+--------------------------------------
+swap(int a,int b) ->gresit, pentu ca se va modifica doar copia variabilelor.Trebuie sa pasez adresele variabilelor
+swap(int *px, int *py) 			swap(&a,&b) ->corect
+
+-arrays: 
+int a[10];
+int *pa=a;//numele array-ului va pointa la primul element
+
+char *pm="hello";//va fi pratic constant
+
+Pointeri la functii(inutil)
+
+Structuri:
+-colectie de variabile
+
+SOLID:
+-single responsability: fiecare clasa / modul trebuie sa aiba un singur motiv de a se modifica
+-open closed: deschid la extindere, inchis la modificari(sa nu ii afectezi functionalitatea, prin mostenire prin ex)
+-loskov substitution: oriunde este folosita, sa pot folosi o clasa de baza
+-interface segreagation: modul cu o interfata si un alt modul fol interfata, acela nu ar trebui sa implementeze functii inutile
+-dependency inversion: high level module nu trebuie sa depinde de cele low level , doar de abstractizarea lor
+
+Clasa vs structura:
+-clasa are membri private default in timp ce la struct sunt publici
+-restrionare acces
+
+.h = header
+-pt definire fct, var
+
+

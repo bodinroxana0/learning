@@ -1,0 +1,23 @@
+Install: (doar o data, pentru ca e global)
+-npm i -g typescript 
+-npm i -g @angular/cli
+
+Generate App:
+-ng new Minimus --routing
+
+The directives of AngularJS:
+-ng-app // This is used to start the AngularJS application
+-ng-init // This is used to initialize the application.
+-ng-controller // It is used when initialization of variables has to be done based on a function
+-ng-model // This is used to bind the values of AngularJS to the controls provided by the application
+-ng-repeat // It is used in the repetition of HTML elements for each item in the collection
+-ng-class // It binds one or more CSS classes to an HTML element in a dynamic manner
+-ng-animate // This directive helps in supporting the animation 
+-ng-show and ng-hide
+-Custom directives
+!see AngularJS Cheat Sheet
+
+Start the development server and open our app in the browser using the following command :
+(-o flag is just to open a new browser tab automatically with the correct URL pointing to your app)
+-ng serve -o 
+
