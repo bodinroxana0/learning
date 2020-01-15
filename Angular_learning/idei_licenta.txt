@@ -1,0 +1,8 @@
+Lista idei licenta:
+
+-Arduino+Java: aplicatie mobila/web care sa controleze un robotel
+-Arduino+Java: sistem deschidere usa prin autenficare cu amprenta/image recognition
+-Robotic Arm Arduino+Matlab 
+-Controlare robot prin gesturi mana
+-ceva de la lucru : Matlab , Visual Perception Using Monocular Camera(Lane Boundary detection, Detection of vehicles,people..,Distance estimation)
+-aplicatie mobile/web , frontend, backend gen Freelancer dar pentru orice domeniu

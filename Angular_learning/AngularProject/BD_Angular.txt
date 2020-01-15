@@ -1,0 +1,15 @@
+// Dummy code - does not really work
+mysql.connect('sql-database-path', 'username', 'password')
+    .then(db => db.query('SELECT * FROM todos'));
+
+# The Real Problem: Security
+This code is accessible by everyone though!
+
+That’s why any code that “talks” to a database belongs onto a server: Your users can’t access that code. 
+And your frontend (i.e. the Angular/ React/ Vue / … app) only sends Http requests to that backend server.
+
+Typically, you therefore expose a REST API on your backend - that API can of course be written with any server-side language you want.
+Node.js, PHP, Java - totally up to you!
+
+angular -reactive forms/vs template driven?
+https://technologyconversations.com/2014/03/26/application-development-back-end-solution-with-java/

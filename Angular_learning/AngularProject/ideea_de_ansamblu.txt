@@ -1,0 +1,64 @@
+-se poate in 2 moduri : adaugarea manuala a fiecarui fisier / generare automata
+-la fel si la html sau route: probabil exista o modalitate usoara
+
+
+Add the below code to style.css under the src folder.
+
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+Also add the below code to index.html for font support.
+
+<link href="//fonts.googleapis.com/icon?family=Material+Icons"  rel="stylesheet">
+
+----------------------------------
+
+ng generate component login
+
+-va contine: -login.component.css, html, spec.ts,ts
+
+---------------------------------
+
+-app.module.ts : -toate componenentele, modulelele 
+		 -sintaxa import { LoginComponent } from './login/login.component';
+
+@NgModule({
+  declarations: [ //componente
+    AppComponent,
+    LoginComponent,
+    UserComponent
+  ],
+  imports: [ //module
+    BrowserModule,
+    BrowserAnimationsModule,
+    CustomMaterialModule,
+    FormsModule,
+    AppRoutingModule
+  ],
+  providers: [], //parte routing
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+
+----------------------------------
+HTML 
+
+Material Toolbar Configuration-MatToolbarModule
+
+---------------------------------
+
+-login.component.ts: importurile de care am nevoie
+
+export class LoginComponent implements OnInit {
+  constructor(private router: Router) { }
+username: string;
+password: string;
+  ngOnInit() {
+  }
+  login() : void {
+    if(this.username == 'admin' && this.password == 'admin'){
+     this.router.navigate(["user"]);
+    }else {
+      alert("Invalid credentials");
+    }
+
+----------------------------------
+ ng serve - pt a rula
